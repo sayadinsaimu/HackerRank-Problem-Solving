@@ -12,9 +12,9 @@ class Result {
 
 		for (int i = 0; i < a.size(); i++) {
 			if (a.get(i) > b.get(i)) {
-				AlicePoint = AlicePoint++;
+				AlicePoint = AlicePoint+1;
 			} else if (a.get(i) < b.get(i)) {
-				BobPoint = BobPoint++;
+				BobPoint = BobPoint+1;
 			} else
 				continue;
 		}
