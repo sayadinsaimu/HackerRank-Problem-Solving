@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 //....This code is not working on locally 
-//....but it is already submitted to hackerrank
+//....but it is finely submitted to hackerrank
 class Result {
 
 	public static int diagonalDifference(List<List<Integer>> arr) {
