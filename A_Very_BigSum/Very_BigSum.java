@@ -2,7 +2,8 @@ package A_Very_BigSum;
 
 import java.io.*;
 import java.util.*;
-
+//....This code is not working on locally 
+//....but it is finely submitted to hackerrank
 class Result {
 
 	public static long aVeryBigSum(List<Long> ar) {
