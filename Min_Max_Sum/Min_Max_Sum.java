@@ -6,21 +6,28 @@ import java.util.*;
 class Result {
 	public static void miniMaxSum(List<Integer> arr) {
 		// Write your code here
-		List<Integer> value = new ArrayList<>();
-		long maxSum = Long.MIN_VALUE;
-		long minSum = Long.MAX_VALUE;
-		for (int i = 0; i < arr.size(); i++) {
-			int sum = 0;
-			for (int j = 0; j < arr.size(); j++) {
-				if (i == j) {
-					continue;
-				}
-				sum = sum + arr.get(j);
-			}
-			minSum = Math.min(minSum, sum);
-			maxSum = Math.max(maxSum, sum);
-		}
-		System.out.println(minSum + " " + maxSum);
+		List <Long> value = new ArrayList<>();
+        	for (int i = 0; i < arr.size(); i++) {
+            		long sum = 0;
+            		for (int j = 0; j < arr.size(); j++) {
+                		if (i == j) {
+                    			continue;
+                		}
+                		sum = sum + arr.get(j);  
+            		}
+            		value.add(sum);
+        	}
+        	long maxSum = value.get(0);
+       		long minSum = value.get(0);
+        	for(int i=1; i<value.size(); i++){
+            		if(value.get(i)>maxSum){
+                		maxSum = value.get(i);
+            		}
+            		if(value.get(i)<minSum){
+                		minSum = value.get(i);
+            		}
+        	}
+        	System.out.println(minSum + " " + maxSum);
 	}
 }
 
