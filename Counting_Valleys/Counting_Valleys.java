@@ -5,25 +5,20 @@ import java.io.*;
 class Result{
 
 	public static int countingValleys(int steps, String path) {
-		int upSum = 0;
-		int downSum = 0;
-		int valley = 0;
-		for(int i =0; i<path.length();i++) {
-			if(path.charAt(i)=='U') {
-				upSum = upSum + 1;
-			}
-//			if(path.charAt(i)=='D') {
-//				downSum = downSum + 1;
-//			}
-			else {
-				downSum = downSum + 1;
-			}
-				
-		}
-		if(upSum-downSum == 0) {
-			valley++;
-		}
-		return valley;
+		int level = 0;
+        	int valley = 0;
+        	for(int i =0; i<path.length();i++) {
+           		if(path.charAt(i) == 'U'){
+                		level++;
+            		}
+			else if(path.charAt(i) == 'D'){
+                		if(level == 0){
+                    			valley++;
+                		}
+               			level--;
+            		}
+        	}
+        	return valley;
 	}	
 }
 
